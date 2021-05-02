@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="actor-web-spring-boot-starter" />
+        <module name="actor-statemachine" />
+        <module name="actor-domain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="actor-component-actor" target="1.6" />
+      <module name="actor-components-parent" target="1.8" />
+      <module name="actor-domain" target="1.8" />
+      <module name="actor-exception" target="1.6" />
+      <module name="actor-statemachine" target="1.8" />
+      <module name="actor-web-spring-boot-starter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
