@@ -1,6 +1,8 @@
 package com.avenger.actor.response;
 
 
+import javax.xml.ws.Response;
+
 public class Result {
 
     public static <T> Response<T> success(T data) {

@@ -1,6 +1,7 @@
 package com.avenger.actor.domain;
 
 import java.util.Date;
+import javax.management.Query;
 
 /**
  * Description:
