@@ -1,4 +1,4 @@
-package com.avenger.actor;
+package com.avenger.actor.kit;
 
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeansException;
@@ -8,12 +8,13 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public final class SpringUtils implements BeanFactoryPostProcessor {
+public final class SpringKit implements BeanFactoryPostProcessor {
 
     private static ConfigurableListableBeanFactory beanFactory;
 
+    @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        SpringUtils.beanFactory = beanFactory;
+        SpringKit.beanFactory = beanFactory;
     }
 
     @SuppressWarnings("unchecked")
