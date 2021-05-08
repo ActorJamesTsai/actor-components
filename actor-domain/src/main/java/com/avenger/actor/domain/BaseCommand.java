@@ -12,13 +12,18 @@ import java.util.Date;
  */
 public abstract class BaseCommand implements Command {
 
+    private static final long serialVersionUID = 6896482516487223906L;
+
     private final String createDate;
 
     private final Class<?> clazz;
 
-    public BaseCommand(String createDate, Class<?> clazz) {
+    private final Boolean aSync;
+
+    public BaseCommand() {
         this.createDate = new Date().toString();
         this.clazz = this.getClass();
+        this.aSync = Boolean.FALSE;
     }
 
     @Override
@@ -29,5 +34,10 @@ public abstract class BaseCommand implements Command {
     @Override
     public Class<?> getClazz() {
         return clazz;
+    }
+
+    @Override
+    public Boolean getASync() {
+        return aSync;
     }
 }

@@ -7,6 +7,14 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 @Component
 public final class SpringKit implements BeanFactoryPostProcessor {
 

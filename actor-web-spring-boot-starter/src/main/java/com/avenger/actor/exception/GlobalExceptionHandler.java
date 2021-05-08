@@ -11,6 +11,14 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -36,9 +44,7 @@ public class GlobalExceptionHandler {
     public Response<String> methodArgumentNotValidException(MethodArgumentNotValidException ex) {
         logger.warn("MethodArgumentNotValidException:", (Throwable) ex);
         List<ObjectError> errors = ex.getBindingResult().getAllErrors();
-        StringBuffer sb = new StringBuffer(
-            "\u6570\u636E\u6821\u9A8C\u9519\u8BEF\uFF1A\u6570\u91CF:[" + ex.getBindingResult().getAllErrors().size()
-                + "]:\u9519\u8BEF\u4FE1\u606F:(");
+        StringBuffer sb = new StringBuffer("数据校验错误：数量:[" + ex.getBindingResult().getAllErrors().size() + "]:错误信息:(");
         for (ObjectError objectError : errors) {
             sb.append("[").append(objectError.getDefaultMessage()).append("]");
         }

@@ -7,6 +7,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import org.springframework.core.annotation.Order;
 
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 @Documented

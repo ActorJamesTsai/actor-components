@@ -6,12 +6,26 @@ import java.io.Serializable;
 /**
  * Description:
  *
- * Date: 2020/2/23
+ * Date: 2021/5/8
  *
  * @author JiaDu
  * @version 1.0.0
  */
-public interface Command extends Serializable {
+public interface Event extends Serializable {
+
+    /**
+     * 事件主键
+     *
+     * @return 事件主键
+     */
+    String getId();
+
+    /**
+     * 队列名称
+     *
+     * @return 队列名称
+     */
+    String getQueue();
 
     /**
      * 创建日期
@@ -21,18 +35,19 @@ public interface Command extends Serializable {
     String getCreateDate();
 
     /**
+     * 描述
+     *
+     * @return 描述
+     */
+    String getDescription();
+
+    /**
      * 类名称
      *
      * @return 类
      */
     Class<?> getClazz();
 
-    /**
-     * 是否异步
-     *
-     * @return Boolean
-     */
-    Boolean getASync();
 
     default String toJsonString() {
         return JSON.toJSONString(this);

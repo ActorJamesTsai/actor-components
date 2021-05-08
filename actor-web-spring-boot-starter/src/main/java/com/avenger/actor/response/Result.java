@@ -1,8 +1,13 @@
 package com.avenger.actor.response;
 
-
-import javax.xml.ws.Response;
-
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 public class Result {
 
     public static <T> Response<T> success(T data) {

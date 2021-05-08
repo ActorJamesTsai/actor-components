@@ -8,7 +8,14 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 public final class LambdaKit {
 
     @FunctionalInterface

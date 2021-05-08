@@ -4,6 +4,14 @@ import com.alibaba.fastjson.JSON;
 import com.avenger.actor.response.HttpStatusEnum;
 import com.avenger.actor.response.Response;
 
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 public class RestException extends BaseException {
 
     private static final long serialVersionUID = 2305201073664000499L;

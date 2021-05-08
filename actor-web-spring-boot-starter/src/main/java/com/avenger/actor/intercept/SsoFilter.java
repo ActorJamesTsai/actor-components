@@ -17,6 +17,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.StopWatch;
 
+/**
+ * Description:
+ *
+ * Date: 2021/5/8
+ *
+ * @author JiaDu
+ * @version 1.0.0
+ */
 public class SsoFilter implements Filter {
 
     private static final Logger logger = LoggerFactory.getLogger(SsoFilter.class);
@@ -48,12 +56,12 @@ public class SsoFilter implements Filter {
         if (null == user) {
             this.log.warn(" - the CurrentUser is null .");
             interceptReturn(401,
-                "\u5F53\u524D\u4F1A\u8BDD\u4FE1\u606F\u65E0\u6548,\u8D26\u53F7\u4FE1\u606F\u4E3A\u7A7A",
+                "当前会话信息无效,账号信息为空",
                 (HttpServletResponse) response);
             return;
         }
         this.log
-            .info("\u7528\u6237\u8C03\u7528\u57FA\u672C\u4FE1\u606F->[name:{},ID:{}]", user.getName(), user.getId());*/
+            .info("用户调用基本信息->[name:{},ID:{}]", user.getName(), user.getId());*/
         chain.doFilter(request, response);
         stopWatch.stop();
         logger.info(":{}", stopWatch.prettyPrint());
@@ -84,7 +92,7 @@ public class SsoFilter implements Filter {
         String method = req.getMethod();
         String origin = req.getHeader("Origin");
         String contentType = req.getContentType();
-        logger.info("method={},origin={},contentType={},authToken={}", method, origin, contentType);
+        logger.info("method={},origin={},contentType={}", method, origin, contentType);
         resp.setHeader("Access-Control-Allow-Credentials", "true");
         resp.setHeader("Access-Control-Allow-Headers", "Content-Type,X-Auth-Token,AccessToken,token,sso-token");
         resp.addHeader("Access-Control-Expose-Headers", "*");
