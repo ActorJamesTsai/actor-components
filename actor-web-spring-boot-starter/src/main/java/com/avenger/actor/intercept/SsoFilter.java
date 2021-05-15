@@ -64,7 +64,7 @@ public class SsoFilter implements Filter {
             .info("用户调用基本信息->[name:{},ID:{}]", user.getName(), user.getId());*/
         chain.doFilter(request, response);
         stopWatch.stop();
-        logger.info(":{}", stopWatch.prettyPrint());
+        logger.info("stopWatch:{}", stopWatch.prettyPrint());
     }
 
     public SsoFilter(String[] exclusions, String origin) {
