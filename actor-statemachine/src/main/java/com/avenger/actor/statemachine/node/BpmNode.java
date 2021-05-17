@@ -1,5 +1,7 @@
 package com.avenger.actor.statemachine.node;
 
+import java.util.List;
+
 /**
  * Description:
  *
@@ -10,4 +12,5 @@ package com.avenger.actor.statemachine.node;
  */
 public interface BpmNode {
 
+    List<Node> selectByDefKey(String defKey);
 }

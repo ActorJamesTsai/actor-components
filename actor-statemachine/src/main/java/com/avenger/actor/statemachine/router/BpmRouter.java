@@ -1,5 +1,7 @@
 package com.avenger.actor.statemachine.router;
 
+import java.util.List;
+
 /**
  * Description:
  *
@@ -10,4 +12,5 @@ package com.avenger.actor.statemachine.router;
  */
 public interface BpmRouter {
 
+    List<Router> selectByDefKey(String defKey);
 }

@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="actor-statemachine" />
         <module name="actor-web-spring-boot-starter" />
         <module name="actor-domain" />
       </profile>
@@ -19,6 +18,7 @@
       <module name="actor-exception" target="1.6" />
       <module name="actor-statemachine" target="1.8" />
       <module name="actor-web-spring-boot-starter" target="1.8" />
+      <module name="actor-webflux-spring-boot-starter" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

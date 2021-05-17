@@ -13,4 +13,6 @@ public interface BpmInstance {
     Instance selectOneById(String instanceId);
 
     void updateByPrimaryKey(Instance currentInstance);
+
+    void save(Instance instance);
 }

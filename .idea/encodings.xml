@@ -3,6 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/actor-domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/actor-statemachine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actor-statemachine/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/actor-web-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actor-webflux-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actor-webflux-spring-boot-starter/src/main/resources" charset="UTF-8" />
   </component>
 </project>

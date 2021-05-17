@@ -1,5 +1,7 @@
 package com.avenger.actor.intercept;
 
+import com.avenger.actor.context.UserContext;
+import com.avenger.actor.context.UserContext.CurrentUser;
 import com.avenger.actor.response.Response;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -52,16 +54,13 @@ public class SsoFilter implements Filter {
             chain.doFilter(request, response);
             return;
         }
-        /*CurrentUser user = UserContext.getUser(req);
+        CurrentUser user = UserContext.getUser(req);
         if (null == user) {
-            this.log.warn(" - the CurrentUser is null .");
-            interceptReturn(401,
-                "当前会话信息无效,账号信息为空",
-                (HttpServletResponse) response);
+            logger.warn(" - the CurrentUser is null .");
+            interceptReturn(401, "当前会话信息无效,账号信息为空", (HttpServletResponse) response);
             return;
         }
-        this.log
-            .info("用户调用基本信息->[name:{},ID:{}]", user.getName(), user.getId());*/
+        logger.info("用户调用基本信息->[name:{},ID:{}]", user.getName(), user.getId());
         chain.doFilter(request, response);
         stopWatch.stop();
         logger.info("stopWatch:{}", stopWatch.prettyPrint());

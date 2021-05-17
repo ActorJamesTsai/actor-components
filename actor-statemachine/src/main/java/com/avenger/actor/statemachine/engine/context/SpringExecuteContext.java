@@ -16,11 +16,6 @@ public class SpringExecuteContext implements ExecuteContext {
 
     private BpmInstance bpmInstance;
 
-    public SpringExecuteContext(String instanceId, BpmInstance bpmInstanceMapper) {
-        this.instanceId = instanceId;
-        this.bpmInstance = bpmInstanceMapper;
-    }
-
     public String getInstanceId() {
         return instanceId;
     }
@@ -36,4 +31,10 @@ public class SpringExecuteContext implements ExecuteContext {
     public void setBpmInstance(BpmInstance bpmInstance) {
         this.bpmInstance = bpmInstance;
     }
+
+    public SpringExecuteContext(String instanceId, BpmInstance bpmInstanceMapper) {
+        this.instanceId = instanceId;
+        this.bpmInstance = bpmInstanceMapper;
+    }
+
 }

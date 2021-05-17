@@ -71,8 +71,8 @@ public class StateMachineBuilderFacade {
         return startStateMachineInstance(machineId, machineVersion, null);
     }
 
-    public String startStateMachineInstance(String machineId, int machineVersion, String initialState) {
-        return startStateMachineInstance(machineId, machineVersion, null, null);
+    public String startStateMachineInstance(String machineId, int machineVersion, String instanceId) {
+        return startStateMachineInstance(machineId, machineVersion, null, instanceId);
     }
 
     /**

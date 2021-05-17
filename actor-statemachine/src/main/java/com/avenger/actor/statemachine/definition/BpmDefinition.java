@@ -11,4 +11,6 @@ package com.avenger.actor.statemachine.definition;
 public interface BpmDefinition {
 
     Definition selectByInstId(String instanceId);
+
+    Definition selectByDefKey(String defKey, Integer defVersion);
 }

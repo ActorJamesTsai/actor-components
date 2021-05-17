@@ -1,5 +1,6 @@
 package com.avenger.actor.statemachine.engine;
 
+import com.avenger.actor.statemachine.engine.builder.StateMachineBuilderFacade;
 import com.avenger.actor.statemachine.engine.context.SpringExecuteContext;
 import com.avenger.actor.statemachine.instance.Instance;
 import org.slf4j.Logger;
@@ -17,7 +18,7 @@ import org.squirrelframework.foundation.fsm.impl.AbstractStateMachine;
 public class ActionLabelStateMachine extends
     AbstractStateMachine<ActionLabelStateMachine, String, String, SpringExecuteContext> {
 
-    private static final Logger log = LoggerFactory.getLogger(ActionLabelStateMachine.class);
+    private static final Logger log = LoggerFactory.getLogger(StateMachineBuilderFacade.class);
 
     protected void stateTransitAction(String stateFrom, String stateTo, String action, SpringExecuteContext context) {
         System.out.println("stateTransitAction:" + stateFrom + "-" + stateTo + ":" + action + ":instanceid=" + context

@@ -4,6 +4,7 @@
  */
 package com.avenger.actor.context;
 
+import java.io.Serializable;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -24,11 +25,27 @@ public class UserContext {
         return (CurrentUser) request.getAttribute("currentUser");
     }
 
+    public static CurrentUser getUser(HttpServletRequest request) {
+        return (CurrentUser) request.getAttribute("currentUser");
+    }
 
-    interface CurrentUser {
 
-        String getUserId();
+    public interface CurrentUser extends Serializable {
 
-        String getUserName();
+        String getId();
+
+        String getName();
+
+        UserState getState();
+    }
+
+
+    enum UserState {
+
+        normal,
+
+        invalid,
+
+        lock;
     }
 }

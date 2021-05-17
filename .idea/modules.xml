@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/actor-components-parent.iml" filepath="$PROJECT_DIR$/actor-components-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/actor-domain/actor-domain.iml" filepath="$PROJECT_DIR$/actor-domain/actor-domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/actor-statemachine/actor-statemachine.iml" filepath="$PROJECT_DIR$/actor-statemachine/actor-statemachine.iml" />
       <module fileurl="file://$PROJECT_DIR$/actor-web-spring-boot-starter/actor-web-spring-boot-starter.iml" filepath="$PROJECT_DIR$/actor-web-spring-boot-starter/actor-web-spring-boot-starter.iml" />
     </modules>
   </component>

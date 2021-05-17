@@ -2,17 +2,47 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.avenger</groupId>
         <artifactId>actor-framework-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.avengers.actor</groupId>
     <artifactId>actor-statemachine</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <name>actor-statemachine</name>
+    <packaging>jar</packaging>
+    <name>${project.artifactId}:${project.version}</name>
+    <description>${project.artifactId}</description>
+    <url>https://github.com/ActorJamesTsai/actor</url>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License v2.1</name>
+            <url>https://github.com/ActorJamesTsai/actor/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/ActorJamesTsai/actor.git</connection>
+        <developerConnection>scm:git:https://github.com/ActorJamesTsai/actor.git</developerConnection>
+        <url>https://github.com/ActorJamesTsai/actor</url>
+    </scm>
+    <issueManagement>
+        <url>https://github.com/ActorJamesTsai/actor/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+    <developers>
+        <developer>
+            <id>ActorJamesTsai</id>
+            <name>JamesTsai</name>
+            <email>313635448(at)qq.com</email>
+            <roles>
+                <role>Developer</role>
+                <role>Architect</role>
+            </roles>
+            <timezone>+8</timezone>
+            <url>https://github.com/ActorJamesTsai</url>
+        </developer>
+    </developers>
 
     <dependencies>
         <dependency>
@@ -27,6 +57,15 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>com.avenger.actor</groupId>
+            <artifactId>actor-domain</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
@@ -36,49 +75,16 @@
             <artifactId>hutool-core</artifactId>
             <version>5.6.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.15.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.redisson</groupId>
+                    <artifactId>redisson-spring-data-24</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-
-            <!-- 要将源码放上去，需要加入这个插件 -->
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <configuration>
-                    <attach>true</attach>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-
-        <resources>
-            <resource>
-                <directory>src/main/java</directory><!--所在的目录 -->
-                <includes><!--包括目录下的.properties,.xml文件都会扫描到 -->
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
-    </build>
-
 </project>

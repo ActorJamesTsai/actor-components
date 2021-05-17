@@ -11,7 +11,6 @@ import java.util.List;
  * @author JiaDu
  * @version 1.0.0
  */
-
 public class MachineData {
 
     private String startState;
@@ -56,6 +55,7 @@ public class MachineData {
         private int toStateType;
 
         private String actionName;
+
 
         public String getFromStateKey() {
             return fromStateKey;
