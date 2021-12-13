@@ -1,7 +1,6 @@
 package com.avenger.actor.domain;
 
 import com.alibaba.fastjson.JSON;
-import java.io.Serializable;
 
 /**
  * Description:
@@ -11,15 +10,14 @@ import java.io.Serializable;
  * @author JiaDu
  * @version 1.0.0
  */
-public interface Aggregate extends Serializable {
+public interface Aggregate<ID extends Identifier> extends Entity<ID> {
 
     /**
-     * 获取业务主键
+     * 版本
      *
-     * @return 业务主键
+     * @return 版本号
      */
-    Object getUniqueId();
-
+    int getVersion();
 
     default String toJsonString() {
         return JSON.toJSONString(this);

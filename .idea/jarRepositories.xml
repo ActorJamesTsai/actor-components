@@ -2,9 +2,29 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="Grails-core" />
+      <option name="name" value="Grails-core" />
+      <option name="url" value="https://repo.grails.org/grails/core/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="userPublicRepos-2" />
+      <option name="name" value="userPublicRepos-2" />
+      <option name="url" value="https://repo20211016.wakecloud.com/artifactory/libs-snapshot/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Google" />
+      <option name="name" value="Google" />
+      <option name="url" value="https://maven.google.com/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Central" />
+      <option name="name" value="Central" />
+      <option name="url" value="https://repo1.maven.org/maven2/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="snapshots" />
@@ -17,9 +37,14 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="jboss.community" />
-      <option name="name" value="JBoss Community repository" />
-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+      <option name="id" value="sysPublicRepos-1" />
+      <option name="name" value="sysPublicRepos-1" />
+      <option name="url" value="https://repo.huaweicloud.com/repository/maven/huaweicloudsdk/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="c7eefc3c791d4035b8c41b18fd4c57de_2_0-snapshot" />
+      <option name="name" value="c7eefc3c791d4035b8c41b18fd4c57de_2_0-snapshot" />
+      <option name="url" value="https://devrepo-cn-south-1.devcloud.huaweicloud.com/01/nexus/content/repositories/c7eefc3c791d4035b8c41b18fd4c57de_2_0/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
@@ -30,6 +55,41 @@
       <option name="id" value="jdk18" />
       <option name="name" value="Repository for JDK 1.8 builds" />
       <option name="url" value="http://www.myhost.com/maven/jdk18" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Spring-release" />
+      <option name="name" value="Spring-release" />
+      <option name="url" value="https://repo.spring.io/libs-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="userPublicRepos-1" />
+      <option name="name" value="userPublicRepos-1" />
+      <option name="url" value="https://repo20211016.wakecloud.com/artifactory/libs-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="c7eefc3c791d4035b8c41b18fd4c57de_1_0-release" />
+      <option name="name" value="c7eefc3c791d4035b8c41b18fd4c57de_1_0-release" />
+      <option name="url" value="https://devrepo-cn-south-1.devcloud.huaweicloud.com/01/nexus/content/repositories/c7eefc3c791d4035b8c41b18fd4c57de_1_0/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Jcenter" />
+      <option name="name" value="Jcenter" />
+      <option name="url" value="https://jcenter.bintray.com/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Jboss" />
+      <option name="name" value="Jboss" />
+      <option name="url" value="http://repository.jboss.org/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Grails-plugins" />
+      <option name="name" value="Grails-plugins" />
+      <option name="url" value="https://repo.grails.org/grails/plugins/" />
     </remote-repository>
   </component>
 </project>

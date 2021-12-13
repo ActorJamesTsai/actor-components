@@ -10,13 +10,13 @@ import java.util.Date;
  * @author JiaDu
  * @version 1.0.0
  */
-public abstract class BaseEntity implements Entity {
+public abstract class BaseEntity<ID extends Identifier> implements Entity<ID> {
 
     private static final long serialVersionUID = -3047188624480603119L;
 
-    private Object createdBy;
+    private transient Object createdBy;
     private Date creationDate;
-    private Object lastUpdatedBy;
+    private transient Object lastUpdatedBy;
     private Date lastUpdateDate;
 
     @Override

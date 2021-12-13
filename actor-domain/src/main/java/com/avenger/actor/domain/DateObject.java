@@ -1,16 +1,19 @@
+/*
+ * Copyright © 2021, WakeData Technology Co.,Ltd. All rights reserved. WakeData PROPRIETARY/CONFIDENTIAL. Use is subject
+ * to license terms.
+ */
 package com.avenger.actor.domain;
 
 import java.util.Date;
 
 /**
- * Description:
- *
- * Date: 2021/5/8
+ * like BaseDO
  *
  * @author JiaDu
  * @version 1.0.0
+ * @since 2021/12/13
  */
-public interface Entity<ID extends Identifier> extends Identifiable<ID> {
+public interface DateObject<ID extends Identifier> extends Identifiable<ID> {
 
     /**
      * 创建人
